@@ -10,6 +10,8 @@ import (
 
 const vaultTitle = "huan-test"
 const itemTitle = "autotest-1"
+const clientID = "bc3c8e5d-266d-4277-ae7f-28b0b06f5xxx"
+const clientSecret = "O3ah~.i227KdjOJz~.24gqY6jOo1.xxxxx"
 
 func main() {
 	// Create a 1password client to connect to the connector running on AKS.
@@ -37,8 +39,8 @@ func main() {
 
 			// concealed means password type which cannot be seen from the web console directly.
 			// But we still can see the content by clicking the Reveal button...
-			{Value: "O3ah~.i227KdjOJz~.24gqY6jOo1.xxxxx", Type: "concealed", Label: "client_secret"},
-			{Value: "bc3c8e5d-266d-4277-ae7f-28b0b06f5xxx", Type: "STRING", Label: "client_id"},
+			{Value: clientID, Type: "STRING", Label: "client_id"},
+			{Value: clientSecret, Type: "concealed", Label: "client_secret"},
 		},
 
 		// It means the item was created by a connector running on AKS.
